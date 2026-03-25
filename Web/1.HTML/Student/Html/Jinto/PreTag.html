@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pre Tag Activity</title>
+    </head>
+    <body>
+        <h2>Normal Paragraph</h2>
+        <P>This is spaced text.
+            But html removes 
+            extra white spaces.
+        </P>
+
+        <h2>Pre Tag Used Paragraph</h2>
+        <pre>This paragrapgh wrote inside
+            a "pre" html tag.
+            white spaces are not removed 
+            by html.
+        </pre>
+
+        <pre id ="codeDisplay"></pre>
+        <script>
+        const code = 'console.log("Hello!")';
+         document.getElementById("codeDisplay").textContent = code;
+
+  
+        console.log("Hello!");
+        </script>
+
+        <pre>
+          *
+         * *
+        * * *
+       * * * *
+      * * * * *
+     * * * * * *
+        </pre>
+    </body>
+</html>
