@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            border: solid black 1px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            position: absolute;
+            width: 80%;
+            height: 120%;
+            top: 0px;
+            left: 20%;
+            background-color: azure;
+            padding-left: 50px;
+        }
+        .sidebar{
+            border: solid black 1px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 120%;
+            width: 25%;
+            background-color: rgb(5, 3, 119);
+        }
+        .sidebar #logo {
+
+            display: flex;
+            justify-content: center;
+            font-style: italic;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+        .sidebar .sidecontent {
+             padding-left: 10%; 
+        }
+        .content .navbar {
+            /* border: solid black 1px; */
+            position: relative;
+            top: 30px;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navbar .search {
+
+            /* border: solid black 1px; */
+            border-radius: 20px;
+            width: 400px;
+            height: 30px;
+            background-color: rgb(165, 178, 186);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+            /* position: absolute;
+            left: 300px;
+            top: 200px; */
+        }
+        .navbar .right{
+            /* border: solid black 1px; */
+            /* position: relative; */
+            width: 300px;
+            /* left: 700px;
+            top: -20px; */
+        }
+
+        .navbar .left{
+            /* border: solid black 1px; */
+            /* position: relative; */
+            width: 200px;
+        }
+        .account{
+            width: 200px;
+            position: relative;
+            top: 80px;
+            left: 50px;
+        }
+        .account hr {
+            border: none;
+            border-top: 2px solid rgb(165, 178, 186);
+        }
+        .form{
+            border: solid black 1px;
+            padding-left: 20px;
+            width: 65%;
+            position: relative;
+            top: 120px;
+        }
+        .form .pic{
+            padding-left: 0px;
+        }
+        .form input{
+            width: 400px;
+            height: 30px;
+        }
+        .form button{
+            background-color: blue;
+            position:relative;
+            left: 250px;
+            bottom: 20px;
+            height: 40px;
+            width: 20%;
+            border-radius: 10px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <br><br><br>
+        <div id="logo">
+            <img src="" alt="jobielogo"><br>
+            <span>Jobie</span><br><br><br><br><br>
+        <br>
+        </div>
+        <div class="sidecontent">
+            <img src="" alt="home"><b>Dashboard</b><br><br>
+            <img src="" alt="home"><b>Job Providers</b><br><br>
+            <img src="" alt="home"><b>New Registration</b><br><br>
+            <img src="" alt="home"><b>Job Seekers</b><br><br>
+            <img src="" alt="home"><b>Jobs</b><br><br>
+            <img src="" alt="home"><b>My Profile</b><br><br>
+            <img src="" alt="home"><b>Messages</b><br><br>
+            <img src="" alt="home"><b>Settings</b><br><br>
+            <img src="" alt="home"><b>LogOut</b><br><br>
+        </div>
+    </div>
+    <div class="content">
+        <div class="navbar">
+            <div class="left">
+                <img src="" alt="icon">
+                <span>My Profile</span>
+            </div>
+            <div class="search">
+                <span>Search Something Here....</span>
+                <img src="" alt="home">
+            </div>
+            <div class="right">
+                <img src="" alt="home">
+                <img src="" alt="home">
+                <img src="" alt="home">
+                <b>Oda Dink</b>
+                <span>Super Admin</span>
+            </div>
+        </div>
+        <div class="account">
+            <img src="" alt="home"> <b>Account</b><br><hr>
+        </div>
+        <div class="form">
+            <img src="" alt="home" class="pic"><br><br>
+            <form>
+                <label>Full Name</label><br>
+                <input placeholder="Please Enter Your Full Name" type="text" ><br><br>
+                <label>User Name</label><br>
+                <input placeholder="Please Enter Your User Name" type="text"><br><br>
+                <label>Email</label><br>
+                <input placeholder="Please Enter Your Email" type="email"><br><br>
+                <label>Phone No</label><br>
+                <input placeholder="Please Enter Your Phone Number" type="number"><br><br><br><br>
+                <button>Upload Details</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
