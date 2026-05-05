@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.welcome{
+    width: 100vw;
+    height: 10vh;
+    /* border: solid black 1px; */
+    background-color: rgb(169, 96, 236);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.welcome div{
+    font-size: xx-large;
+    color: white;
+    animation: welcomeAnimation 3s linear 0s infinite normal none;
+}
+@keyframes welcomeAnimation {
+    0%{transform: translateY(0px);}
+    25%{transform: translateY(-10px);}
+    50%{transform: translateY(6px);}
+    75%{transform: translateY(-2px);}
+    100%{transform: translateY(2px);} 
+}
+.nav{
+    width: 100vw;
+    height: 5vh;
+    /* border: solid black 1px; */
+    background-color: rgb(169, 96, 236);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: end;
+}
+.nav span{
+    color: white;
+    width: 70px;
+    padding-left: 5px;
+}
+.nav span:hover{
+    background-color: yellow;
+    border-radius: 20px;
+}
+.about{
+    width: 80vw;
+    height: 20vh;
+    margin-left: 100px;
+    margin-top: 30px;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px black ;
+    border-radius: 20px;
+    row-gap: 10px;
+    
+}
+.about span{
+    color: brown;
+    font-size: xx-large;
+}
+.about:hover{
+    transform: translateY(-10px);
+}
+.gallery{
+    width: 80vw;
+    height: 50vh;
+    margin-left: 100px;
+    margin-top: 30px;
+    border: solid black 1px;
+    box-shadow: 10px black ;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.gallery .title{
+    position: relative;
+    left: 32vw;
+    top: -20vh;
+    font-size: xx-large;
+    color: brown;
+}
+.gallery div{
+    width:12vw ;
+    height: 25vh;
+    border: solid black 1px;
+    /* transition: scale 2s; */
+}
+.gallery div>span{
+    position: relative;
+    left: 4vw;
+    top: 10vh;
+    color: white;
+}
+.gallery div:hover{
+    transform: scale(1.1, 1.1);
+}
+.gallery .image1{
+    background-color: red;
+}
+.gallery .image2{
+    background-color: blue;
+}
+.gallery .image3{
+    background-color: green;
+}
+.gallery .image4{
+    background-color: yellow;
+}
+.gallery .image5{
+    background-color: violet;
+}
+
+.activities{
+
+    width: 80vw;
+    height: 50vh;
+    margin-left: 100px;
+    margin-top: 30px;
+    border: solid black 1px;
+    box-shadow: 10px black ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.activities .title{
+
+    color: brown;
+    font-size: xx-large;
+}
+.activities div {
+
+    width: 70vw;
+    height: 8vh;
+    background-color: yellow;
+    border: solid black 1px;
+    border-radius: 10px;
+    box-shadow: black 2px;
+    padding-left: 10px;
+}
+
+.activities div:hover{
+    transform: scale(.9);
+}
+
+.contact {
+
+    width: 75vw;
+    height: 75vh;
+    margin-left: 100px;
+    margin-top: 30px;
+    border: solid black 1px;
+    box-shadow: 10px black ;
+    border-radius: 20px;
+    padding-left: 50px;
+}
+.contact input{
+    width: 70vw;
+    height: 8vh;
+}
+.contact textarea{
+    width: 70vw;
+    height: 20vh;
+}
+.contact button{
+
+    width: 70vw;
+    height: 8vh;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+
+}
+.contact span{
+    position: relative;
+    left: 33vw;
+    top: 2vh;
+    color: brown;
+    font-size: xx-large;
+}
+.contact button:hover{
+    transform: scale(1.1);
+    background-color: skyblue;
+}
