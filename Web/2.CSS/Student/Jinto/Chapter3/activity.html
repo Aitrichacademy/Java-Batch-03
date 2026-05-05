@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div1{
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+        transform: rotate(45deg);
+        position: relative;
+        top: 20px;
+    }
+    .img1 {
+        width: 100px;
+        height: 100px;
+    }
+    .img1:hover{
+
+        transform: scale(2);
+    }
+    .button{
+        border: solid black 1px;
+        width: 100px;
+        height: 50px;
+        margin-top: 50px;
+    }
+    .button:hover{
+        transform: skewX(50deg);
+        transform: skewY(20deg);
+    }
+    .div2{
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+        margin-top: 20px;
+    }
+    .div2:hover{
+        transform: translate(100px,50px);
+    }
+    .div3{
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    .text{
+        margin-left: 10px;
+    }
+    .text:hover{
+        transform: rotateX(130deg)
+    }
+    .button2{
+        border: solid black 1px;
+        width: 100px;
+        height: 50px;
+        margin-top: 50px;
+        background-color: brown;
+        transition: background-color 0.5s;
+    }
+    .button2:hover{
+        background-color: rgb(42, 163, 165);
+    }
+    .div4{
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        transition: width height 0.5s;
+        background-color: blueviolet;
+    }
+    .div4:hover{
+        width: 100px;
+        height: 100px;
+    }
+    .div5{
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        border : solid rgb(69, 42, 165) 2px;
+        transition: border-color border-width 0.5s;
+    }
+    .div5:hover{
+        border-color: black;
+        border-width: 5px;
+    }
+    .fade{
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .fade:hover{
+        opacity: 0.5;
+    }
+    .div6{
+        width: 50px;
+        height: 50px;
+        border: solid black 2px;
+        border-radius: 50px;
+        position: absolute;
+        top: 10px;
+        left: 200px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+    }
+    @keyframes bounce {
+        0%   {top:5%;}
+        25%  {top:25%;}
+        50%  {top:50%;}
+        75%  {top:75%;}
+        100% {top:100%;}
+    }
+    .div7{
+        width: 50px;
+        height: 50px;
+        border: solid black 2px;
+        border-radius: 50px;
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        animation-name: loading;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .div7 .div8{
+        width: 25px;
+        height: 1px;
+        border: solid black 1px;
+        background-color: black;
+        position: relative;
+        left: 25px;
+        top: 25px;
+
+    }
+    @keyframes loading {
+        /* 0%{border-top-color: white;} */
+        /* 25%{border-right-color: white;}
+        50%{border-bottom-color: white;}
+        75%{border-left-color: white;}
+        100%{border-top-color: white;} */
+        25%{transform: rotate(90deg);}
+        50%{transform: rotate(180deg);}
+        75%{transform: rotate(270deg);}
+        100%{transform: rotate(360deg);}
+    }
+    b {
+        animation-name: fading;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes fading {
+        from{opacity: 1;}
+        to{opacity: 0;}
+    }
+    .slide {
+        position: relative;
+        animation: sliding 6s linear 0s infinite normal none;
+    }
+    @keyframes sliding {
+        from{left: 0%;}
+        to{left: 95%;}
+    }
+</style>
+<body>
+    <div class="div1"></div>
+    <br>
+    <br>
+    <br>
+    <img class="img1" src="Aitrich new Favicon.jpeg">
+    <br>
+    <button class="button">Click</button>
+    <div class="div2"></div>
+    <div class="div3"><p class="text">Rotate!!!</p></div>
+    <button class="button2">Click!!!</button>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <pre class="fade">Fading</pre>
+    <div class="div6"></div>
+    <div class="div7">
+        <div class="div8"></div>
+    </div>
+    <b>Welcome</b><br><br>
+    <span class="slide">BYE....</span>
+</body>
+</html>

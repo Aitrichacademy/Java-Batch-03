@@ -1,0 +1,139 @@
+.main{
+    display: flex;
+}
+.second{
+    padding-left: 10px;
+    padding-right: 100px;
+}
+.sidebar{
+    
+    width: 30vw;
+    height: 120vh;
+    /* border: solid black 1px; */
+    background-color: rgb(0, 115, 255);
+    padding-top: 100px;
+}
+.sidebar .hireme{
+    color: white;
+    margin-bottom: 50px;
+    animation: hiremeAnimation 3s linear 0s infinite alternate;
+}
+@keyframes hiremeAnimation {
+    from{transform: translateX(0);}
+    to{transform: translateX(100px);}
+}
+.sidebar .sidelist{
+
+    padding-left: 50px;
+}
+.sidelist .add{
+    margin-top: 130px;
+}
+.sidelist li {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 30px;
+    padding-left: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.sidelist li:hover{
+    background-color: white;
+}
+.navbar{
+    width: 70vw;
+    height: 10vh;
+    /* border: solid black 1px; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.content {
+
+    width: 65vw;
+    height: 72%;
+    border-radius: 50px;
+    border: solid black 1px;
+    box-shadow: 20px;
+    margin-left: 35px;
+    margin-top: 30px;
+    margin-right: 35px;
+    padding: 50px 20px;
+}
+.form{
+    padding-left: 150px;
+
+}
+.form li {
+    margin-bottom: 20px;
+}
+.form .input2{
+    background-color: rgb(101, 160, 189);
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom button{
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    border: none;
+}
+.footer{
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(0, 115, 255);
+}
+.footer span{
+    color: white;
+    font-size: xx-large;
+    font-style: italic;
+    position: relative;
+    left: 17vw;
+    top: 25vh;
+     display: inline;
+}
+.footer .img1{
+    border: solid black 1px;
+    position: relative;
+    left: 65vw;
+    top: 10vh;
+    border-radius: 50%;
+    background-color: blue;
+    height: 25vh;
+    width: 10vw;
+    animation: img1Anime 2s linear 0s infinite alternate none;
+    
+}
+.footer .img2{
+    border: solid black 1px;
+    position: relative;
+    left: 76vw;
+    top: -15vh;
+    border-radius: 50%;
+    background-color: rgb(251, 0, 255);
+    height: 25vh;
+    width: 10vw;
+    animation: img2Anime 2s linear 0s infinite alternate none;
+}
+@keyframes img1Anime{
+    from{transform: translateX(0);}
+    to{transform: translateX(-20px);}
+}
+@keyframes img2Anime{
+    from{transform: translateX(0);}
+    to{transform: translateX(20px);}
+}
+* {
+    margin: 0;
+    padding: 0;
+}
