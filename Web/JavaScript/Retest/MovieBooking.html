@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Movie Booking!!!!</h1>
+    </div>
+    <div class="booking-site">
+        <div>
+            <img src="movie-night-background.webp" alt="">
+        </div>
+        <div class="form-section">
+            <form >
+                <label for="customerName">Name :</label><br>
+                <input type="text" id="customerName" name="customerName" placeholder="Your Name" required onblur="validateCustomerName()"><br><br>
+                <p id="customerNameMsg" style="color: red;"> * Please give your name above</p>
+                <label for="movieName">Movie Name :</label><br>
+                <input type="text" id="movieName" name="movieName" placeholder="Movie Name" required onblur="validateMovieName()"><br><br>
+                <p id="movieNameMsg" style="color: red;"> * Please give movie name above</p>
+                <label for="numOfTickets">Tickets :</label><br>
+                <input type="text" id="numOfTickets" name="numOfTickets" placeholder="Number Of Tickets" required min="1" max="5" onblur="validateTicketCount()"><br><br>
+                <p id="ticketMsg" style="color: red;"> * Please give number of tickets above</p>
+                <button type="button" class="booking-btn" onclick="createBookingCard('customerName', 'movieName', 'numOfTickets')">Book Ticket</button>
+            </form>
+        </div>
+        <br>
+        
+    </div>
+    <hr>
+        <div id="booking-card">
+
+        </div>
+    <script>
+            function validateCustomerName(){
+                const name = document.getElementById("customerName").value;
+                const alertMsg = document.getElementById("customerNameMsg");
+
+                if(name===""){
+                    alertMsg.style.display="block";
+                }else{
+                    alertMsg.style.display="none";
+                }
+            }
+
+            function validateMovieName(){
+                const name = document.getElementById("movieName").value;
+                const alertMsg = document.getElementById("movieNameMsg");
+
+                if(name===""){
+                    alertMsg.style.display="block";
+                }else{
+                    alertMsg.style.display="none";
+                }
+            }
+
+            function validateTicketCount(){
+                const num = document.getElementById("numOfTickets").value;
+                const alertMsg = document.getElementById("ticketMsg");
+
+                if(num===""){
+                    alertMsg.style.display="block";
+                }else if(num < 1 || num > 5){
+                    alertMsg.innerText="Minimum ticket count is 1 and maximum ticket count is 5. "
+                    alertMsg.style.display="block";
+
+                }else{
+                    alertMsg.style.display="none";
+                }
+            }
+
+            var idCount = 1;
+            function createBookingCard(customerName, movieName, numOfTickets){
+                const card = document.createElement('div');
+                card.setAttribute("id", `card${idCount}`);
+                
+
+                const name = document.getElementById(customerName).value;
+                const movie = document.getElementById(movieName).value;
+                const numTickets = document.getElementById(numOfTickets).value;
+
+
+                const bookingCard = document.getElementById("booking-card");           
+
+                card.innerHTML=`Customer Name : ${name}
+                Movie Name : ${movie}
+                Tickets : ${numTickets}
+                <button  type='button' onclick="removeCard('card${idCount}', 'booking-card')">Remove</button> <br>`;
+
+                console.log(card);
+                bookingCard.appendChild(card);
+                idCount++;
+            }
+
+            function removeCard(child){
+                console.log(child);
+                const childElement= document.getElementById(child);
+                if(childElement){
+                    childElement.style.display="none";
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.header h1 {
+    text-align: center;
+}
+.booking-site{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+.form-section{
+    margin-top: 2%;
+}
+.booking-btn{
+    width: 100%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+}
+#customerNameMsg{
+    display: none;
+}
+#movieNameMsg {
+     display: none;
+ }
+#ticketMsg {
+     display: none;
+}

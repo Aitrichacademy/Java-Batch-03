@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <table class="products-table" border="" cellspacing="0">
+            <tr>
+                <th><b>Products</b></th>
+                <th colspan="2"><b>Price</b></th>
+            </tr>
+            <tr>
+                <td id="name1"><span>Product1</span></td>
+                <td id="price1"><span>100</span></td>
+                <td><button  class="cart-btn" onclick="addToCart('name1', 'price1')">Add To Cart</button></td>
+            </tr>
+            <tr>
+                <td id="name2"><span>Product2</span></td>
+                <td id="price2"><span>599</span></td>
+                <td><button  class="cart-btn" onclick="addToCart('name2', 'price2')">Add To Cart</button></td>
+            </tr>
+            <tr>
+                <td id="name3"><span>Product3</span></td>
+                <td id="price3"><span>849</span></td>
+                <td><button  class="cart-btn" onclick="addToCart('name3', 'price3')">Add To Cart</button></td>
+            </tr>
+            <tr>
+                <td id="name4"><span>Product4</span></td>
+                <td id="price4"><span>134</span></td>
+                <td><button  class="cart-btn" onclick="addToCart('name4', 'price4')">Add To Cart</button></td>
+            </tr>
+        </table><br><br>
+        <hr>
+        <br><br>
+        <div>
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+        </div>
+        <br>
+        <br>
+        <div id="Total">
+            <span>Total : 0</span>
+        </div>
+    </div>
+</body>
+<script>
+
+    var sum = 0;
+    var id = 1;
+
+    function addToCart(name, price){
+        
+        const cartItem = document.createElement('div');
+        const rmBtn = document.createElement('Button');
+        rmBtn.className = "cart-btn";
+        rmBtn.innerText="Remove";
+
+        const cart = document.getElementById('cart-items');
+        const pName = document.getElementById(name).innerText;
+        const productPrice = document.getElementById(price).innerText;
+
+        cartItem.id = `item${id}`;
+        id++;
+        cartItem.innerText=`${pName} | ${productPrice}`;
+        cart.appendChild(cartItem);
+        cart.append(rmBtn);
+
+        sum +=parseInt(productPrice);
+
+        const Total = document.getElementById('Total');
+        Total.innerHTML=`Total : ${sum}`;
+
+        // rmBtn.addEventListener(onclick, remove())
+    }
+
+
+    // function remove(item){
+
+    //     const removeItem = document.getElementById(item);
+    //     removeItem.style.display='none';
+    // }
+</script>
+</html>
